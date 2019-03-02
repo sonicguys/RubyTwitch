@@ -7,11 +7,11 @@ def HandleCommands(line)
 	# moderators = 100 messages (within a 30 second window)
 	# default = 20 messages (within a 30 second window)
 	# max_messages is set to 80 just to keep it safe
-	
+
 	user = "" # Required to (Avoid "undefined local variable or method `user'")
-	
+
 	prefix = "!"
-	
+
 	admins = [
 		#"exampleuser1_inlowercase",
 		#"exampleuser2_inlowercase"
@@ -48,7 +48,7 @@ def HandleCommands(line)
 		original_message = match && match[3]
 		if original_message =~ /^/
 			original_message.strip!
-			message = original_message.downcase!
+			message = original_message.downcase
 			user = match[1]	# Get username
 
 			if message

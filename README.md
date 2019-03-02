@@ -14,8 +14,19 @@ But as you can see in the preview image it's also able to handle custom commands
 ----
 
 ## How To Use:  
-1. Open **"credentials.txt"** and replace OAUTH, BOTNAME and CHANNEL with the values you need.
-2. Run **"TwitchBot.rb"**
+1. Clone this repo to the system which will run the bot
+2. `cd` into the repo root and create the file `./credentials.txt` (i.e. `touch credentials.txt`)
+2. Copy/paste into the file as such:
+  *     OAUTH = "oauth:GENERATED_OAUTH_TOKEN"
+        CHANNEL = "TWITCH_CHANNEL_NAME"
+        BOTNAME = "TWITCH_USERNAME"
+  * Generate the token for the **OAUTH value** from
+    <https://twitchapps.com/tmi/>
+  * The **CHANNEL value** is the path fragment of your Twitch URL:
+    <s>https://twitch.tv/</s>channel_name
+  * The **BOTNAME value** is your Twitch username or the bot's
+    username (if you created a separate one)
+2. Run `ruby TwitchBot.rb`
 
 ----  
 

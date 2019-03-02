@@ -26,11 +26,6 @@ log.info("Loading \"credentials.txt\"")
 require_relative('CommandsHandler') # File for handling commands
 log.info("Loading \"CommandsHandler.rb\"")
 
-# -------- IGNORE -------- #
-OAUTH.downcase!
-BOTNAME.downcase!
-CHANNEL.downcase!.gsub!("#", "")
-
 # Save "Preparing to connect" to "log.txt"
 log.info("Preparing to connect")
 
@@ -63,7 +58,6 @@ Thread.start do
 	puts ""
 	while (running) do
 		ready = IO.select([socket])
-		
 		ready[0].each do |s|
 			line = s.gets
 			if line =~ /^/
